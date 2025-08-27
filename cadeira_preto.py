@@ -12,16 +12,27 @@
 # formate o cabeçalho deste arquivo, depois implemente as funções abaixo
 
 def maximo(nums):
-    """oque faz
-    oque recebe
-    oque retorna"""
-    # TODO: percorra a lista guardando o maior atual
-    ...
-def e_par(n: int) -> bool:
-    """ ... """
-    # TODO: retorne se n é par
-    ...
-def fatorial(n: int) -> int:
-    """   ...  """
-    # TODO: implemente de forma iterativa (sem recursão)
-    ...
+	"""
+	Calcula o maior número digitado.
+	Recebe o número máximo de interações, solicita ao usuário o preenchimento da lista,
+	faz comparações para descobrir o maior número digitado na lista e retorna o maior número digitado.
+	"""
+	lista = []
+	for i in range(nums):
+		lista.append(int(input(f"Digite o número {i + 1} da lista: ")))
+	maior = lista[0]
+	for i in range(len(lista)):
+		if maior < lista[i]:
+			maior = lista[i]
+	print("Maior numero digitado: ", maior)
+
+maximo(5)
+
+#def e_par(n: int) -> bool:
+   # """ ... """
+	# TODO: retorne se n é par
+   # ...
+#def fatorial(n: int) -> int:
+   # """   ...  """
+	# TODO: implemente de forma iterativa (sem recursão)
+   # ...
