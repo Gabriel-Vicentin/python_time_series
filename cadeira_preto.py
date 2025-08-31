@@ -1,21 +1,21 @@
-#V1.1
+#!/usr/bin/env python3  
+# -*- coding: utf-8 -*-
+#----------------------------------------------------------------------------
+# Criador: Gabriel Vicentin Bonfim   
+# Data de criação: 25/08/2025 
+# Versão ='1.3'
+# Descrição: Funções básicas para analisar valores
+# ---------------------------------------------------------------------------
 
-# EM python, o que é um cabeçalho do arquivo, para que ele serve? Qual a diferença entre um cabeçalho do arquivo para uma docstring? Para que serve uma docstring
+"""Docstring: Docstrings são maneiras de comentar durante o código. É Possível acessar as Docstrings durante o período de funcionamento do código, possibilitando a criação de funções extras para prestar ajuda em relação a documentação."""
+
+#Cabeçalho: O cabeçalho é utilizado para dar um contexto geral do código e informações básicas sobre seu autor.
 
 
-#Docstring: Docstrings são maneiras de comentar durante o código, normalmente feitas nos módulos, packages, crates. é Possível também ser acessada durante o período de funcionamento do código, possibilitando a criação de funções extras para prestar ajuda em relação a documentação.
-#Cabeçalho: É uma maneira de identificar o arquivo, seu criador, versão, descrição básica, contato, data de criação. É utilizado para dar um contexto geral do código.
-#A grande diferença é a forma que utilizamos ambas, docstrings utilizamos para comentar durante o código, com o intuito de deixar a execução mais limpa e clara. Já o cabeçalho é um contexto geral antes de utilizarmos o arquivo.
-
-
-
-# formate o cabeçalho deste arquivo, depois implemente as funções abaixo
 
 def maximo(nums):
 	"""
-	Calcula o maior número digitado.
-	Recebe o número máximo de interações, solicita ao usuário o preenchimento da lista,
-	faz comparações para descobrir o maior número digitado na lista e retorna o maior número digitado.
+	Calcula o maior número digitado em uma lista 
 	"""
 	lista = []
 	for i in range(nums):
@@ -25,14 +25,37 @@ def maximo(nums):
 		if maior < lista[i]:
 			maior = lista[i]
 	print("Maior numero digitado: ", maior)
+	return maior
 
 maximo(5)
 
-#def e_par(n: int) -> bool:
-   # """ ... """
-	# TODO: retorne se n é par
-   # ...
-#def fatorial(n: int) -> int:
-   # """   ...  """
-	# TODO: implemente de forma iterativa (sem recursão)
-   # ...
+def e_par(n: int) -> bool:
+	"""
+	Recebe um Numéro N e Informa se este número é par ou impar.
+	"""
+	if n % 2 == 0:
+		print("É par")
+		return True
+	else:
+		print("É impar")
+		return False
+	# Ternario: print ("É par" if n % 2 == 0 else "É impar")
+
+e_par(2)
+
+def fatorial(n: int) -> int:
+	"""
+	Recebe um Número N e informa o resultado do fatorial do mesmo
+	"""
+	fat = 1
+	for i in range(1, n + 1):
+		fat *= i
+	print(f"Resultado final: {fat}")
+	return fat
+
+fatorial(5)
+
+
+help(maximo)
+help(e_par)
+help(fatorial)
